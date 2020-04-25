@@ -89,59 +89,62 @@ class _TrialDateState extends State<TrialDate> {
       appBar: AppBar(
         title: Text(' Date Trial'),
       ),
-      body: Column(
-        children: <Widget>[
-          TextFormField(
-            controller: dateStart,
-            decoration: InputDecoration(
-              labelText: "Event Start Date",
-              hintText: "Ex. Insert your start date",
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: <Widget>[
+            TextFormField(
+              controller: dateStart,
+              decoration: InputDecoration(
+                labelText: "Event Start Date",
+                hintText: "Ex. Insert your start date",
+              ),
+              onTap: () async {
+                startDate();
+              },
             ),
-            onTap: () async {
-              startDate();
-            },
-          ),
-          TextFormField(
-            controller: dateEnd,
-            decoration: InputDecoration(
-              labelText: "Event End Date",
-              hintText: "Ex. Insert your end date",
+            TextFormField(
+              controller: dateEnd,
+              decoration: InputDecoration(
+                labelText: "Event End Date",
+                hintText: "Ex. Insert your end date",
+              ),
+              onTap: () async {
+                endDate();
+              },
             ),
-            onTap: () async {
-              endDate();
-            },
-          ),
-          TextFormField(
-            controller: dateStop,
-            decoration: InputDecoration(
-              labelText: "Event Stop Date",
-              hintText: "Ex. Insert your stop date",
+            TextFormField(
+              controller: dateStop,
+              decoration: InputDecoration(
+                labelText: "Event Stop Date",
+                hintText: "Ex. Insert your stop date",
+              ),
+              onTap: () async {
+                stopDate();
+              },
             ),
-            onTap: () async {
-              stopDate();
-            },
-          ),
-          TextFormField(
-            controller: timeStart,
-            decoration: InputDecoration(
-              labelText: "Event Start TIme",
-              hintText: "Ex. Insert your start time",
+            TextFormField(
+              controller: timeStart,
+              decoration: InputDecoration(
+                labelText: "Event Start TIme",
+                hintText: "Ex. Insert your start time",
+              ),
+              onTap: () async {
+                startTime();
+              },
             ),
-            onTap: () async {
-              startTime();
-            },
-          ),
-          TextFormField(
-            controller: timeEnd,
-            decoration: InputDecoration(
-              labelText: "Event End TIme",
-              hintText: "Ex. Insert your end time",
+            TextFormField(
+              controller: timeEnd,
+              decoration: InputDecoration(
+                labelText: "Event End TIme",
+                hintText: "Ex. Insert your end time",
+              ),
+              onTap: () async {
+                endTime();
+              },
             ),
-            onTap: () async {
-              endTime();
-            },
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
